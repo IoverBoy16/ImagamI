@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Sets the font -->
+    <title>ImagamI</title>
+    <link rel="stylesheet" href="./style.css"> <!-- References the CSS file -->
+</head>
+<body onload="displayRandomImage()" class="background-color" style="background-color: #194561;"> <!-- Sets the background due a deep hue blue -->
+    <div>
+        <img src="logo.png" alt="ImagamI Logo" style="width: 175px; height: auto;">
+        <a href="ImagamI.html" class="button">Home</a>
+    </div>
+    <hr> <!-- Horizontal line after the logo -->
+    <div style="text-align: center;">
+        <p style="font: icon; font-size: larger; font-weight: 600;"><span id="movieName"></span></p>
+        <img border="5" id="randomImage" src="" alt="Random Image" style="width: auto; height: 350px; border: 5px solid #06070d; border-radius: 10px;">
+    </div>
+    <div style="text-align: center;">
+        <a href="#" class="button" style="clear: both;" onclick="checkContinent('Africa'); return false;">Africa</a>
+        <a href="#" class="button" style="clear: both;" onclick="checkContinent('Antarctica'); return false;">Antarctica</a>
+        <a href="#" class="button" style="clear: both;" onclick="checkContinent('Asia'); return false;">Asia</a>
+        <a href="#" class="button" style="clear: both;" onclick="checkContinent('Australia'); return false;">Australia</a>
+        <a href="#" class="button" style="clear: both;" onclick="checkContinent('Europe'); return false;">Europe</a>
+        <a href="#" class="button" style="clear: both;" onclick="checkContinent('North America'); return false;">North America</a>
+        <a href="#" class="button" style="clear: both;" onclick="checkContinent('South America'); return false;">South America</a>
+    </div>     
+    <main>
+        <h1>
+            <p style="text-align: center;">Streak: <span id="streak">0</span></p>
+            <p style="text-align: center;">Session Best: <span id="topstreak">0</span></p>
+        </h1>  
+    </main>
+</body>
+<script src="ContinentStreakJS.js"></script>
+</html>
