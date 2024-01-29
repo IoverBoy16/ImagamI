@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Sets the font -->
+    <title>ImagamI</title>
+    <link rel="stylesheet" href="./style.css"> <!-- References the CSS file -->
+</head>
+<body onload="displayRandomImage()" class="background-color" style="background-color: #194561;"> <!-- Sets the background due a deep hue blue -->
+    <div>
+        <img src="logo.png" alt="ImagamI Logo" style="width: 175px; height: auto;">
+        <a href="ImagamI.html" class="button">Home</a>
+    </div>
+    <hr> <!-- Horizontal line after the logo -->
+
+    <div style="text-align: center;">  <!-- Loads the images and the character names above -->
+        <p style="font-weight: 1000; font-size: large;" id="characterNames"></p>
+        <img border="5" img id="characterOne" src="" alt="Character One" style="width: auto; height: 300px; border: 5px solid #06070d; border-radius: 10px;">
+        <img border="5" img id="characterTwo" src="" alt="Character Two" style="width: auto; height: 300px; border: 5px solid #06070d; border-radius: 10px;">
+    </div>
+
+
+    <div style="text-align: center;">
+        <a href="#" class="button" style="clear: both;" onclick="isSameMovie(true); return false;">Same</a>
+        <a href="#" class="button" style="clear: both;" onclick="isSameMovie(false); return false;">Different</a>
+    </div>
+
+
+    <main>
+        <h1>  <!-- Loads statistics -->
+            <p style="text-align: center;">Streak: <span id="streak">0</span></p>
+            <p style="text-align: center;">Session Best: <span id="topstreak">0</span></p>
+        </h1>  
+    </main>
+</body>
+<script src = "MatchFlickJS.js"></script>
+</html>

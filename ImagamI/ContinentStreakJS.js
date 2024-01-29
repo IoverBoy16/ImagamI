@@ -1,4 +1,4 @@
-// Base path for images
+// Initializes base variables
 const basePath = "Continent Streak Images/";
 let currentContinent = "";
 let streak = 0;
@@ -18,7 +18,10 @@ const images = {
 
 function getRandomImage() { // chooses a random folder from the list in the images -> Chooses a random image from folder
     const continents = Object.keys(images); // Creates a list of all the possible continents to choose from
-    const randomContinent = continents[Math.floor(Math.random() * continents.length)]; // Chooses a random continent
+    let randomContinent = continents[Math.floor(Math.random() * continents.length)]; // Chooses a random continent
+    while (randomContinent === currentContinent){ // Chooses a random continent until different from previous
+        randomContinent = continents[Math.floor(Math.random() * continents.length)]; // Chooses a random continent
+    }
     currentContinent = randomContinent //
 
     const continentImages = images[randomContinent]; // Selects the images from the selected folder
