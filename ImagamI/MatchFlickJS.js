@@ -20,7 +20,10 @@ const images = {
     "Titanic": ["Thomas Andrews.avif", "Caledon Hockley.avif", "Fabrizio.avif", "Jack Dawson.avif", "Rose DeWitt Bukater.avif", "Ruth DeWitt Bukater.avif"],
     "Indiana Jones": ["George McHale.avif", "Harold Oxley.avif", "Henry Walton Jones.avif", "Indiana Jones.avif", "Sallah El-Kahir.avif", "Short Round.avif"],
     "The Dark Knight": ["Alfred.avif", "Bruce Wayne.avif", "Bane.avif", "Harvey Dent.avif", "Jim Gordon.avif", "Lucius Fox.avif", "Joker.avif", "Rachel Dawes.avif"],
-    "Star Wars": ["Anakin Skywalker.webp", "Chewbacca.jpg", "Greedo.webp", "Han Solo.webp", "Luke Skywalker.webp", "Princess Leia.webp", "Yoda.png"]
+    "Star Wars": ["Anakin Skywalker.webp", "Chewbacca.jpg", "Greedo.webp", "Han Solo.webp", "Luke Skywalker.webp", "Princess Leia.webp", "Yoda.png"],
+    "The Shining": ["Danny Torrance.webp", "Dick Hallorann.webp", "Jack Torrance.webp", "Lloyd.webp", "Stuart Ullman.jpg"],
+    "Inception": ["Dominic Cobb.avif", "Eames.avif", "Mal Cobb.avif", "Mr. Saito.avif", "Robert Michael Fischer.avif", "Professor Stephen Miles.avif"],
+    "Jurassic Park": ["Robert Muldoon.avif", "Dennis Nedry.avif", "Owen Grady.avif", "John Hammond.avif", "Dr. Alan Grant.avif", "Dr. Ian Malcolm.avif"]
 };
 // File path for all the potential images that can be loaded
 
@@ -37,7 +40,7 @@ This function first decides if the characters chosen should be from the same mov
     This script also handles all variable storing and updating
 */
     const movies = Object.keys(images);
-    sameMovie = Math.random() < 0.3;
+    sameMovie = Math.random() < 0.35;
     if (sameMovie) { // Code to select 2 characters from the same folder, 30% chance of occuring
         currentMovie = movies[Math.floor(Math.random() * movies.length)];
         const movieCharacters = images[currentMovie];
@@ -119,4 +122,6 @@ function isSameMovie(answer){
     displayRandomImage();
 }
 
-
+function gameExplanation() {
+    alert("Welcome to MatchFlick!\nIn this game, your goal is to guess whether or not characters were featured in the same film or not!");
+}

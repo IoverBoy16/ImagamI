@@ -5,11 +5,12 @@
     <title>ImagamI</title>
     <link rel="stylesheet" href="./style.css"> <!-- References the CSS file -->
 </head>
-<body onload="displayRandomImage()" class="background-color" style="background-color: #194561;"> <!-- Sets the background due a deep hue blue -->
-    <div>
-        <img src="logo.png" alt="ImagamI Logo" style="width: 175px; height: auto;">
+<body onload="displayRandomImage()" class="background-color" style="background-color: #194561;"> <!-- Sets the background due to deep hue blue -->
+    <div class="header">
         <a href="ImagamI.html" class="button">Home</a>
-    </div>
+        <a class="button" href="#" onclick="gameExplanation()">How to play</a>
+        <img src="logo.png" alt="ImagamI Logo" class="logo center">
+    </div>    
     <hr> <!-- Horizontal line after the logo -->
 
     <div style="text-align: center;">  <!-- Loads the images and the character names above -->
@@ -18,12 +19,10 @@
         <img border="5" img id="characterTwo" src="" alt="Character Two" style="width: auto; height: 300px; border: 5px solid #06070d; border-radius: 10px;">
     </div>
 
-
     <div style="text-align: center;">
         <a href="#" class="button" style="clear: both;" onclick="isSameMovie(true); return false;">Same</a>
         <a href="#" class="button" style="clear: both;" onclick="isSameMovie(false); return false;">Different</a>
     </div>
-
 
     <main>
         <h1>  <!-- Loads statistics -->
@@ -32,5 +31,5 @@
         </h1>  
     </main>
 </body>
-<script src = "MatchFlickJS.js"></script>
+<script src="MatchFlickJS.js"></script>
 </html>

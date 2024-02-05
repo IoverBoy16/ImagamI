@@ -6,14 +6,14 @@
     <link rel="stylesheet" href="./style.css"> <!-- References the CSS file -->
 </head>
 <body onload="displayRandomImage()" class="background-color" style="background-color: #194561;"> <!-- Sets the background due a deep hue blue -->
-    <div>
-        <img src="logo.png" alt="ImagamI Logo" style="width: 175px; height: auto;">
+    <div class="header">
         <a href="ImagamI.html" class="button">Home</a>
-    </div>
+        <img src="logo.png" alt="ImagamI Logo" class="logo">
+    </div>    
     <hr> <!-- Horizontal line after the logo -->
 
     <div style="text-align: center;">
-        <p style="font: icon; font-size: larger; font-weight: 600;"><span id="movieName"></span></p>
+        <p style="font-size: x-large;"><span id="movieName"></span></p>
         <img border="5" id="randomImage" src="" alt="Random Image" style="width: auto; height: 350px; border: 5px solid #06070d; border-radius: 10px;">
     </div>
 
